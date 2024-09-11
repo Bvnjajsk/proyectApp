@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { SessionManager } from 'src/managers/SessionManagers';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,40 @@ import { SessionManager } from 'src/managers/SessionManagers';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  loginForm: FormGroup = this.fb.group({
+    username: ['', Validators.required],
+    password: ['', Validators.required]
+  });
 
-  constructor(private router: Router, private sessionManager: SessionManager) { }
+  constructor(private fb: FormBuilder,private navCtrl: NavController, private router: Router
+  ) {}
+
+  ngOnInit() {
+    // Inicialización del formulario en ngOnInit
+  }
+
+  onLogin() {
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+      // Aquí puedes agregar la lógica para verificar las credenciales
+      const user = JSON.parse(localStorage.getItem('user') || '{}');
+      if (user.username === username && user.password === password) {
+        this.router.navigate(['/home']);
+        alert('Logeado con Exito!');
+    }else {
+      alert('Credenciales Invalidas');
+  }}}
+
+  onRegister() {
+    // Redirigir al formulario de registro
+    this.navCtrl.navigateForward('/register');
+  }
+}
+
+
+
+
+  /*constructor(private router: Router, private sessionManager: SessionManager) { }
     user: string = '';
     password: string = '';
 
@@ -28,7 +61,7 @@ export class LoginPage implements OnInit {
 
   onRegisterButtonPressed() {
     this.router.navigate(['/register'])
-  }
+  }*/
 
-}
+
 

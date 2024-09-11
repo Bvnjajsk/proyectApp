@@ -1,0 +1,15 @@
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  ion-spinner {
+    color: #545455; /* Cambia el color del spinner si lo deseas */
+    margin-bottom: 16px;
+    transform: scale(2.5); /*Cambia el tamaño del spinner */
+  }
+  

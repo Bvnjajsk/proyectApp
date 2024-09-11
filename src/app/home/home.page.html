@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <div class="profile-button-container">
+      <ion-button (click)="viewProfile()">
+        <img src="assets/images/profile-icon.png" alt="Profile Icon" class="profile-icon">
+      
+      </ion-button>
+    </div>
+    <ion-title>Home</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
+  <!-- Carrusel de imágenes -->
+  <div class="carousel-container">
+    <img src="assets/images/zapatilla1.png" alt="Imagen 1" class="carousel-image">
+    <img src="assets/images/zapatilla2.png" alt="Imagen 2" class="carousel-image">
+    <img src="assets/images/zapatilla3.png" alt="Imagen 3" class="carousel-image">
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Imágenes estáticas con descripciones -->
+  <div class="static-images">
+    <div class="static-item">
+      <img src="assets/images/zapatilla3.png" alt="Imagen Estática 1" class="static-img">
+      <p class="image-description left-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti odit ratione, quia non eaque ea dolor porro laborum asperiores ducimus repellat voluptas necessitatibus obcaecati adipisci corporis vero quis. Alias.</p>
+    </div>
+    <div class="static-item">
+      <p class="image-description right-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nulla obcaecati enim quia ducimus natus est voluptas nam amet saepe. Rerum, dolore vero. Consequuntur vitae, sequi exercitationem officia quo voluptas.</p>
+      <img src="assets/images/zapatilla2.png" alt="Imagen Estática 2" class="static-img">
+    </div>
   </div>
 </ion-content>
+
+

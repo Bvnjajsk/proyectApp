@@ -6,6 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 
 #container strong {
@@ -25,3 +26,87 @@
 #container a {
   text-decoration: none;
 }
+
+.profile-icon {
+  width: 15px; /* Ajusta el tamaño según lo necesario */
+  height: 24px;
+  margin-right: 0px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-button-container {
+  position: absolute;
+  top: 5px; /* Ajusta la distancia desde el borde superior */
+  right: 5px; /* Ajusta la distancia desde el borde izquierdo */
+  display: flex;
+  align-items: center;
+  z-index: 10; /* Asegúrate de que el botón esté por encima de otros elementos */
+}
+
+/* Estilo para el ícono dentro del botón */
+.profile-icon {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px;
+  margin-right: 1px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo opcional para el texto del botón */
+.profile-button-container ion-button {
+  font-size: 8px;
+}
+
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.carousel-image {
+  width: 50%;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.static-images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.static-item {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 80%;
+  max-width: 600px; /* Ajusta según sea necesario */
+}
+
+.static-img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-description {
+  font-size: 10px;
+  color: #555;
+  margin: 0 10px;
+  flex: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.left-description {
+  text-align: right;
+}
+
+.right-description {
+  text-align: left;
+}
+

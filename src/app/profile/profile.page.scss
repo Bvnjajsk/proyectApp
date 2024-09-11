@@ -1,0 +1,24 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .profile-icon {
+    width: 120px; /* Ajusta el tamaño según lo necesario */
+    height: 120px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-bottom: 16px; /* Espacio debajo de la imagen */
+  }
+  
+  .username {
+    font-size: 24px; /* Tamaño de fuente del nombre del usuario */
+    margin-bottom: 32px; /* Espacio debajo del nombre */
+  }
+  
+  ion-button {
+    width: 80%; /* Ajusta el tamaño del botón según sea necesario */
+  }
+  

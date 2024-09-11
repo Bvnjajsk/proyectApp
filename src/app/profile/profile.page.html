@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="profile-container">
+    <!-- Imagen del perfil -->
+    <img src="assets/images/profile-icon.png" alt="Profile Icon" class="profile-icon">
+
+    <!-- Nombre del usuario -->
+    <h2 class="username">{{ username }}</h2>
+
+    <!-- Botón de cerrar sesión -->
+    <ion-button expand="full" (click)="logout()">Cerrar Sesión</ion-button>
+  </div>
+</ion-content>
+
