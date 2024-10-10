@@ -13,3 +13,22 @@
     transform: scale(2.5); /*Cambia el tamaño del spinner */
   }
   
+  .splash-background {
+    background-color: #f0f0f0; /* Color de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+  }
+  
+  .spinner-container {
+    text-align: center; /* Centra el texto */
+  }
+  
+  .splash-text {
+    margin-top: 15px; /* Espaciado entre el spinner y el texto */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: #333; /* Color del texto */
+  }
+  

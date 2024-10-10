@@ -13,3 +13,81 @@ ion-content {
     gap: 16px; /* Espacio entre input-container y button-container */
     height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
  }
+ ion-item {
+  margin-bottom: 16px; /* Ajusta el espacio entre elementos */
+}
+ion-label {
+  transition: none; /* Desactiva las animaciones */
+}
+
+.white-button {
+  background-color: white; /* Color de fondo blanco */
+  color: black; /* Color del texto negro */
+  --ion-color-primary: white; /* Establece el color primario en blanco */
+  --ion-color-primary-rgb: 255, 255, 255; /* Color RGB para efectos */
+  --background: white; /* Color de fondo */
+  --color: black; /* Color del texto */
+}
+
+/* Estilo para el botón de "Registrarse" */
+.dark-button {
+  background-color: #28a745; /* Color de fondo más oscuro (ajusta según prefieras) */
+  color: black; /* Color del texto negro */
+  --ion-color-primary: #28a745; /* Establece el color primario en más oscuro */
+  --ion-color-primary-rgb: 240, 240, 240; /* Color RGB para efectos */
+  --background: #28a745; /* Color de fondo */
+  --color: black; /* Color del texto */
+}
+
+/* Efecto al presionar */
+.white-button:active {
+  background-color: lightgray; /* Color de fondo al ser presionado */
+}
+
+.dark-button:active {
+  background-color: #d0d0d0; /* Color de fondo al ser presionado */
+}
+
+
+
+ ion-card {
+  margin-top: 20px;
+}
+ion-card-header {
+  text-align: center; // Centra el texto
+}
+
+ion-card-title {
+  margin: 0; // Elimina el margen si es necesario
+}
+
+
+
+@media (min-width: 768px) {
+  ion-card {
+    padding: 20px;
+  }
+}
+
+ion-item {
+
+  border-radius: 15px;
+  padding: 5px 10px;  // Reduce el padding interno
+  margin-bottom: 10px; // Ajusta el margen entre los elementos
+  font-size: 14px;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+ion-grid {
+  height: 100%;
+}
+
+ion-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

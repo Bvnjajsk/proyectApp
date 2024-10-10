@@ -23,10 +23,15 @@ export class ProfilePage implements OnInit {
   logout() {
     // Limpia la información de sesión y redirige al login
     localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/splash']);
   }
   goHome() {
     // Navega al inicio
     this.router.navigate(['/home']);
+  }
+  changePassword() {
+    // Implementa aquí la lógica para cambiar la contraseña
+    console.log("Cambiar contraseña");
+    // Podrías abrir un modal o redirigir a una página para cambiar la contraseña
   }
 }

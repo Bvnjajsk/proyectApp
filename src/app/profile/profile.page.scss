@@ -1,24 +1,94 @@
+
+.profile-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que ocupe el 100% del espacio disponible */
+}
+
+.welcome-title {
+  flex: 1; /* Permite que el título ocupe el espacio disponible */
+  text-align: center; /* Centra el texto */
+  font-size: 1.8em; /* Tamaño de fuente grande */
+  font-weight: bold; /* Hace que el texto sea negrita */
+  margin: 0; /* Quita márgenes para alinear correctamente */
+}
+ion-card {
+  width: 90%; /* Ajusta el ancho de la card */
+  max-width: 400px; /* Ancho máximo de la card */
+  margin: 20px; /* Espaciado alrededor de la card */
+}
+/* Estilo para el contenedor del perfil */
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Espaciado interno */
+  height: 100%; /* Asegura que ocupe todo el alto del contenedor */
+  text-align: center; /* Centrar el texto */
+}
+
+.profile-icon {
+  width: 50%; /* Ancho relativo en lugar de un tamaño fijo */
+  max-width: 120px; /* Tamaño máximo para que no sea demasiado grande */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-bottom: 16px; /* Espaciado entre la imagen y el nombre */
+   filter: brightness(0) invert(1); /* Cambia el color del ícono a blanco */
+}
+
+.username {
+  font-size: 2em; /* Tamaño de fuente por defecto */
+  margin: 8px 0; /* Espaciado vertical */
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
   .profile-icon {
-    width: 120px; /* Ajusta el tamaño según lo necesario */
-    height: 120px;
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    margin-bottom: 16px; /* Espacio debajo de la imagen */
+    width: 70%; /* Tamaño de la imagen en pantallas pequeñas */
   }
-  
+
   .username {
-    font-size: 24px; /* Tamaño de fuente del nombre del usuario */
-    margin-bottom: 32px; /* Espacio debajo del nombre */
+    font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
   }
-  
-  ion-button {
-    width: 80%; /* Ajusta el tamaño del botón según sea necesario */
+
+  .welcome-title {
+    font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
   }
-  
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .username {
+    font-size: 1.2em; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+  }
+
+  .welcome-title {
+    font-size: 1.2em; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+  }
+
+  .profile-container {
+    padding: 16px; /* Espaciado interno más pequeño en pantallas muy pequeñas */
+  }
+}
+
+/* Responsividad para pantallas grandes (PC) */
+@media (min-width: 600px) {
+  .profile-container {
+    max-width: 400px; /* Ancho máximo para contenedores en PC */
+    margin: auto; /* Centra el contenedor en pantallas grandes */
+  }
+
+  .username {
+    font-size: 2.5em; /* Tamaño de fuente mayor en pantallas grandes */
+  }
+
+  .profile-icon {
+    width: 100px; /* Tamaño de imagen mayor en pantallas grandes */
+  }
+
+  .welcome-title {
+    font-size: 2.2em; /* Tamaño de fuente mayor en pantallas grandes */
+  }
+}

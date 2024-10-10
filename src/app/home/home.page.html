@@ -1,35 +1,79 @@
 <ion-header>
   <ion-toolbar>
+    <ion-title class="welcome-title">Bienvenido {{username}}</ion-title>
     <div class="profile-button-container">
-      <ion-button (click)="viewProfile()">
+      <ion-button class="transparent-button" (click)="viewProfile()">
         <img src="assets/images/profile-icon.png" alt="Profile Icon" class="profile-icon">
-      
       </ion-button>
     </div>
-    <ion-title>Home</ion-title>
-
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <!-- Carrusel de imágenes -->
-  <div class="carousel-container">
-    <img src="assets/images/zapatilla1.png" alt="Imagen 1" class="carousel-image">
-    <img src="assets/images/zapatilla2.png" alt="Imagen 2" class="carousel-image">
-    <img src="assets/images/zapatilla3.png" alt="Imagen 3" class="carousel-image">
+<ion-content>
+  <div class="banner">
+    <img src="assets/images/banner-nike-scaled.jpg" alt="Banner" />
   </div>
 
-  <!-- Imágenes estáticas con descripciones -->
-  <div class="static-images">
-    <div class="static-item">
-      <img src="assets/images/zapatilla3.png" alt="Imagen Estática 1" class="static-img">
-      <p class="image-description left-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti odit ratione, quia non eaque ea dolor porro laborum asperiores ducimus repellat voluptas necessitatibus obcaecati adipisci corporis vero quis. Alias.</p>
+
+  <div id="container">
+    <div class="card">
+      <img alt="Nike Air Jordan 4 Retro" src="assets/images/zapatilla1.jpeg" />
+      <div class="card-header">Nike Air Jordan 4 Retro University Blue</div>
+      <div class="card-subtitle">$129.990 CLP</div>
+      <div class="card-content">
+        Estas son las Nike Air Jordan 4 Retro University Blue. Un estilo venerado desde que salió a la venta en febrero de 1989, el Air Jordan 4 presentaba tres combinaciones de colores.
+      </div>
+      <button>Ver Más</button>
     </div>
-    <div class="static-item">
-      <p class="image-description right-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nulla obcaecati enim quia ducimus natus est voluptas nam amet saepe. Rerum, dolore vero. Consequuntur vitae, sequi exercitationem officia quo voluptas.</p>
-      <img src="assets/images/zapatilla2.png" alt="Imagen Estática 2" class="static-img">
+
+    <div class="card">
+      <img alt="Adidas Yeezy Boost 350" src="assets/images/zapatilla2.png" />
+      <div class="card-header">Adidas Yeezy Boost 350</div>
+      <div class="card-subtitle">$179.990 CLP</div>
+      <div class="card-content">
+        Las Adidas Yeezy Boost 350 son reconocidas por su estilo y comodidad. Lanzadas en 2015, estas zapatillas rápidamente se convirtieron en un icono de la moda.
+      </div>
+      <button>Ver Más</button>
     </div>
+
+    <div class="card">
+      <img alt="Adidas Yeezy Boost 350" src="assets/images/zapatilla1.png" />
+      <div class="card-header">Adidas Yeezy Boost 350</div>
+      <div class="card-subtitle">$179.990 CLP</div>
+      <div class="card-content">
+        Las Adidas Yeezy Boost 350 son reconocidas por su estilo y comodidad. Lanzadas en 2015, estas zapatillas rápidamente se convirtieron en un icono de la moda.
+      </div>
+      <button>Ver Más</button>
+    </div>
+
+    <!-- Agrega más cartas aquí -->
   </div>
+
+
+
+  <ion-content>
+    <h2 class="reviews-title">Reseñas de Usuarios</h2>
+    <div class="reviews">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Juan Pérez</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          "¡Las Adidas Yeezy Boost 350 son las zapatillas más cómodas que he usado! Las recomiendo al 100%."
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>María González</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          "Las Nike Air Jordan 4 Retro son simplemente increíbles. Un estilo atemporal."
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-content>
+  
+  
 </ion-content>
 
 

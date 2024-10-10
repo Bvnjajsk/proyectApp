@@ -5,45 +5,57 @@
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
-    <ion-item [ngClass]="{ 'error': registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched) }">
-      <ion-label position="floating">
-        Nombre de usuario
-        <ion-icon *ngIf="registerForm.get('username')?.valid && registerForm.get('username')?.touched" name="checkmark-circle" color="success" slot="end"></ion-icon>
-      </ion-label>
-      <ion-input formControlName="username"></ion-input>
-    </ion-item>
-    <ion-note *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched)" color="danger">
-      El nombre de usuario es obligatorio y debe tener al menos 3 caracteres.
-    </ion-note>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-xs="12" size-md="8" size-lg="6"> <!-- Ajusta el tamaño según la pantalla -->
+        <ion-card>
+          <ion-card-header class="ion-text-center">
+            <ion-card-title>Registrarse</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+              <ion-item [ngClass]="{ 'error': registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched) }">
+                <ion-label position="floating">
+                  <strong>Nombre de usuario</strong>
+                  <ion-icon *ngIf="registerForm.get('username')?.valid && registerForm.get('username')?.touched" name="checkmark-circle" color="success" slot="end"></ion-icon>
+                </ion-label>
+                <ion-input formControlName="username"></ion-input>
+              </ion-item>
+              <ion-note *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched)" color="danger">
+                El nombre de usuario es obligatorio y debe tener al menos 3 caracteres.
+              </ion-note>
 
-    <ion-item [ngClass]="{ 'error': registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched) }">
-      <ion-label position="floating">
-        Contraseña
-        <ion-icon *ngIf="registerForm.get('password')?.valid && registerForm.get('password')?.touched" name="checkmark-circle" color="success" slot="end"></ion-icon>
-      </ion-label>
-      <ion-input type="password" formControlName="password"></ion-input>
-    </ion-item>
-    <ion-note *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)" color="danger">
-      La contraseña es obligatoria y debe tener al menos 6 caracteres.
-    </ion-note>
+              <ion-item [ngClass]="{ 'error': registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched) }">
+                <ion-label position="floating">
+                  <strong>Contraseña</strong>
+                  <ion-icon *ngIf="registerForm.get('password')?.valid && registerForm.get('password')?.touched" name="checkmark-circle" color="success" slot="end"></ion-icon>
+                </ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+              </ion-item>
+              <ion-note *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)" color="danger">
+                La contraseña es obligatoria y debe tener al menos 6 caracteres.
+              </ion-note>
 
-    <ion-item [ngClass]="{ 'error': registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched) || registerForm.hasError('mismatch') }">
-      <ion-label position="floating">
-        Confirmar Contraseña
-        <ion-icon *ngIf="registerForm.get('confirmPassword')?.valid && registerForm.get('confirmPassword')?.touched && !registerForm.hasError('mismatch')" name="checkmark-circle" color="success" slot="end"></ion-icon>
-      </ion-label>
-      <ion-input type="password" formControlName="confirmPassword"></ion-input>
-    </ion-item>
-    <ion-note *ngIf="registerForm.hasError('mismatch') && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)" color="danger">
-      Las contraseñas deben coincidir.
-    </ion-note>
+              <ion-item [ngClass]="{ 'error': registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched) || registerForm.hasError('mismatch') }">
+                <ion-label position="floating">
+                  <strong>Confirmar Contraseña</strong>
+                  <ion-icon *ngIf="registerForm.get('confirmPassword')?.valid && registerForm.get('confirmPassword')?.touched && !registerForm.hasError('mismatch')" name="checkmark-circle" color="success" slot="end"></ion-icon>
+                </ion-label>
+                <ion-input type="password" formControlName="confirmPassword"></ion-input>
+              </ion-item>
+              <ion-note *ngIf="registerForm.hasError('mismatch') && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)" color="danger">
+                Las contraseñas deben coincidir.
+              </ion-note>
 
-    <ion-button expand="full" type="submit">Registrarse</ion-button>
-  </form>
+              <ion-button expand="full" type="submit" class="green-button"><strong>Registrarse</strong></ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

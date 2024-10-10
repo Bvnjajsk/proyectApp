@@ -6,4 +6,16 @@
   .error-label {
     color: red;
   }
+  .green-button {
+    background-color: #28a745; /* Color de fondo más oscuro (ajusta según prefieras) */
+    color: black; /* Color del texto negro */
+    --ion-color-primary: #28a745; /* Establece el color primario en más oscuro */
+    --ion-color-primary-rgb: 240, 240, 240; /* Color RGB para efectos */
+    --background: #28a745; /* Color de fondo */
+    --color: black; /* Color del texto */
+  }
+  
+  .green-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+  }
   

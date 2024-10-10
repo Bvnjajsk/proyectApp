@@ -1,25 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Perfil</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="goHome()">
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-
+    <ion-title class="welcome-title">Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <div class="profile-container">
-    <!-- Imagen del perfil -->
-    <img src="assets/images/profile-icon.png" alt="Profile Icon" class="profile-icon">
+  <div class="profile-background">
+    <ion-card>
+      <div class="profile-container">
+        <!-- Imagen del perfil -->
+        <img src="assets/images/profile-icon.png" alt="Profile Icon" class="profile-icon">
 
-    <!-- Nombre del usuario -->
-    <h2 class="username">{{ username }}</h2>
+        <!-- Nombre del usuario -->
+        <h2 class="username">{{ username }}</h2>
 
-    <!-- Botón de cerrar sesión -->
-    <ion-button expand="full" (click)="logout()">Cerrar Sesión</ion-button>
+        <!-- Botón de cerrar sesión -->
+        <ion-button expand="full" (click)="logout()">Cerrar Sesión</ion-button>
+
+        <!-- Botón para cambiar contraseña -->
+        <ion-button expand="full" color="secondary" (click)="changePassword()">
+          Cambiar Contraseña
+        </ion-button>
+      </div>
+    </ion-card>
   </div>
 </ion-content>
-
